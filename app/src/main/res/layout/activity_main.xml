@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#090D16"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gemini Live Assistant"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Native ultra-lightweight floating AI for low-RAM devices"
+            android:textColor="#94A3B8"
+            android:textSize="13sp" />
+
+        <!-- Permissions Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="#161F30"
+            app:cardCornerRadius="16dp"
+            app:strokeColor="#24344D"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Required Permissions"
+                    android:textColor="#38BDF8"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <!-- Overlay Permission Button -->
+                <Button
+                    android:id="@+id/btnGrantOverlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="1. Allow Display Over Other Apps"
+                    android:backgroundTint="#2563EB" />
+
+                <!-- Accessibility Service Button -->
+                <Button
+                    android:id="@+id/btnGrantAccessibility"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="2. Enable Volume Down Double-Press"
+                    android:backgroundTint="#3B82F6" />
+
+                <!-- Audio Permission Button -->
+                <Button
+                    android:id="@+id/btnGrantAudio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="3. Grant Microphone Access"
+                    android:backgroundTint="#60A5FA" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Settings Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="#161F30"
+            app:cardCornerRadius="16dp"
+            app:strokeColor="#24344D"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AI Configuration"
+                    android:textColor="#818CF8"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <!-- API Key -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Google AI Studio API Key"
+                    android:textColor="#E2E8F0"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/etApiKey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:background="#0F172A"
+                    android:hint="AIzaSy..."
+                    android:inputType="textPassword"
+                    android:padding="12dp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#475569"
+                    android:textSize="14sp" />
+
+                <!-- Model Selection -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Model"
+                    android:textColor="#E2E8F0"
+                    android:textSize="13sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerModel"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="6dp"
+                    android:background="#0F172A" />
+
+                <!-- Voice Selection -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Live Voice"
+                    android:textColor="#E2E8F0"
+                    android:textSize="13sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerVoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="6dp"
+                    android:background="#0F172A" />
+
+                <!-- Thinking Mode -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Thinking Mode"
+                        android:textColor="#E2E8F0"
+                        android:textSize="14sp" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switchThinking"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnSaveSettings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="#4F46E5"
+                    android:text="Save Settings" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Test Trigger Button -->
+        <Button
+            android:id="@+id/btnTestOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#10B981"
+            android:text="Test Floating Overlay Now" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="40dp"
+            android:text="Double-press Volume Down anytime to trigger anywhere"
+            android:textColor="#64748B"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</ScrollView>

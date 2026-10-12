@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Gemini Assistant</string>
+    <string name="accessibility_service_description">Detects double-press of Volume Down button to instantly summon the floating Gemini Assistant overlay.</string>
+</resources>

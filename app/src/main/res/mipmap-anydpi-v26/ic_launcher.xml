@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M0,0h108v108h-108z" />
+    <!-- Gradient glow simulated circle -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M54,24 A30,30 0 1,1 53.99,24 Z" />
+    <path
+        android:fillColor="#818CF8"
+        android:pathData="M54,34 A20,20 0 1,1 53.99,34 Z" />
+    <path
+        android:fillColor="#C084FC"
+        android:pathData="M54,44 A10,10 0 1,1 53.99,44 Z" />
+</vector>

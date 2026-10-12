@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/floatingBarContainer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/bg_floating_bar"
+    android:paddingStart="16dp"
+    android:paddingTop="10dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="10dp"
+    android:gravity="center_vertical"
+    android:elevation="12dp">
+
+    <!-- Glowing Orb / Pulsing Indicator -->
+    <View
+        android:id="@+id/orbIndicator"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@drawable/bg_circle_button" />
+
+    <!-- Live Status / Transcription Preview -->
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:text="Listening..."
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"
+        android:maxLines="2"
+        android:ellipsize="end" />
+
+    <!-- Button 1: Screen Capture / Screenshot -->
+    <ImageButton
+        android:id="@+id/btnCapture"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_circle_button"
+        android:src="@drawable/ic_screenshot"
+        android:contentDescription="Capture Screen"
+        android:layout_marginEnd="8dp" />
+
+    <!-- Button 2: Mute / Unmute Mic -->
+    <ImageButton
+        android:id="@+id/btnMute"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_circle_button"
+        android:src="@drawable/ic_mic"
+        android:contentDescription="Mute Voice"
+        android:layout_marginEnd="8dp" />
+
+    <!-- Button 3: Disconnect / Close -->
+    <ImageButton
+        android:id="@+id/btnClose"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_circle_button"
+        android:src="@drawable/ic_close"
+        android:contentDescription="Disconnect" />
+
+</LinearLayout>
