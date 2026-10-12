@@ -14,4 +14,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "GeminiLiveAssistant"
-include ':app'
+include(":app")
